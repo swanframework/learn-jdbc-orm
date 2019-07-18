@@ -24,21 +24,6 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public boolean deleteById(Integer id) {
-        return this.userDao.deleteById(id);
-    }
-
-    @Override
-    public boolean update(UserPO userPO) {
-        return this.userDao.update(userPO);
-    }
-
-    @Override
-    public UserPO findById(Integer id) {
-        return this.userDao.findById(id);
-    }
-
-    @Override
     public List<UserPO> queryAll() {
         return this.userDao.queryAll();
     }

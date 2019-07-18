@@ -8,10 +8,9 @@ import org.zongf.learn.jdbc.orm.service.api.IPersonService;
 import java.util.List;
 
 /**
- * @Description:
- * @author: zongf
- * @date: 2019-06-27 16:53
  * @since 1.0
+ * @author zongf
+ * @created 2019-07-18
  */
 public class PersonService implements IPersonService {
 
@@ -21,21 +20,6 @@ public class PersonService implements IPersonService {
     @Override
     public boolean save(PersonPO personPO) {
         return this.personDao.save(personPO);
-    }
-
-    @Override
-    public boolean deleteById(Integer id) {
-        return this.personDao.deleteById(id);
-    }
-
-    @Override
-    public boolean update(PersonPO personPO) {
-        return this.personDao.update(personPO);
-    }
-
-    @Override
-    public PersonPO findById(Integer id) {
-        return this.personDao.findById(id);
     }
 
     @Override

@@ -15,15 +15,6 @@ public interface IPersonService {
     // 保存实体
     boolean save(PersonPO personPO);
 
-    // 通过id删除实体
-    boolean deleteById(Integer id);
-
-    // 更新实体
-    boolean update(PersonPO personPO);
-
-    // 通过id查询实体
-    PersonPO findById(Integer id);
-
     // 查询所有实体
     List<PersonPO> queryAll();
 }
