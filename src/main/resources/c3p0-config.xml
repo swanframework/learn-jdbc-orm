@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<c3p0-config>
+    <!-- 定义连接池, 指定名称. 程序中通过连接池名称来获取定义的连接池 -->
+    <named-config name="myC3p0Pool">
+        <property name="user">root</property>
+        <property name="password">root</property>
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/learn-jdbc?characterEncoding=UTF-8</property>
+
+        <!-- 若数据连接池中连接数不足时, 一次向数据库申请多少个连接 -->
+        <property name="acquireIncrement">10</property>
+        <!-- 初始化数据库连接池时,创建连接数 -->
+        <property name="initialPoolSize">5</property>
+        <!-- 数据库连接池中活跃的最小连接数-->
+        <property name="minPoolSize">5</property>
+        <!-- 数据库连接池中最大的连接数-->
+        <property name="maxPoolSize">50</property>
+
+        <!-- c3p0 数据库连接池还可以管理Statment的个数 -->
+        <!-- 数据库中最大的Statment 个数 -->
+        <property name="maxStatements">100</property>
+        <!-- 每个连接最多拥有的Statement个数-->
+        <property name="maxStatementsPerConnection">10</property>
+    </named-config>
+</c3p0-config>
