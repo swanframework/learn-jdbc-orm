@@ -11,17 +11,15 @@ import org.zongf.learn.jdbc.orm.service.api.IUserService;
 import java.util.List;
 
 /**
- * @Description:
- * @author: zongf
- * @date: 2019-06-27 16:59
  * @since 1.0
+ * @author zongf
+ * @created 2019-07-18
  */
 public class MixService implements IMixService {
 
     private IUserService userService = ServiceFactory.getService(UserService.class);
 
     private IPersonService personService = ServiceFactory.getService(PersonService.class);
-
 
     @EnableTranscation
     @Override
@@ -39,7 +37,6 @@ public class MixService implements IMixService {
         this.userService.save(new UserPO("user-01", "123456"));
 
         this.personService.save(new PersonPO("person-01", "abcdefg"));
-
 
         // 模拟异常会馆
         int a = 1/0;
